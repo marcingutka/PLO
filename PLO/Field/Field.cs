@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using PLO.Creatures;
+using PLO.RegionTiles;
 
 namespace PLO.Field
 {
@@ -9,10 +10,7 @@ namespace PLO.Field
     {
         public bool Sacred_Spot { get; set; }
         public bool Thorn { get; private set; }
-        public int Gold { get; private set; }
-        public int Population { get; private set; }
-        public int FactorM { get; private set; }
-        readonly List<int> Points = new List<int>();
+        public Tile Tile { get; set;}
         readonly Dictionary<ICreature, int> RedCreatures = new Dictionary<ICreature, int>(); //może lista??
         readonly Dictionary<ICreature, int> BlackCreatures = new Dictionary<ICreature, int>();
         readonly Dictionary<ICreature, int> GreenCreatures = new Dictionary<ICreature, int>();
@@ -23,11 +21,10 @@ namespace PLO.Field
         public int GreenDomination { get; set; }
         public int BlueDomination { get; set; }
         public int NeutralDomination { get; private set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         public Field()
         {
-            IsActive = true;
             NeutralDomination = 1;
         }
     }

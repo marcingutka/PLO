@@ -7,6 +7,5 @@ namespace PLO.Creatures
     public abstract class ICreature
     {
         public int Level { get; protected set; }
-        public abstract int GetLevel();
     }
 }

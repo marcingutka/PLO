@@ -15,7 +15,7 @@ namespace Tests
         {
             ICreature creature = new RedCreatureLvl1();
             
-            Assert.AreEqual(creature.GetLevel(), 1);
+            Assert.AreEqual(creature.Level, 1);
         }
     }
 }

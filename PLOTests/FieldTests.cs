@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using PLO.Field;
+using System.Collections.Generic;
 
 namespace Tests
 {
@@ -14,8 +15,6 @@ namespace Tests
         public void CreatingField()
         {
             Field field = new Field();
-
-            Assert.AreEqual(field.IsActive, true);
             Assert.AreEqual(field.NeutralDomination, 1);
         }
     }
