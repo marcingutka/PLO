@@ -53,5 +53,31 @@ namespace Tests
             Assert.AreEqual(2, map.map[1].Tile.Number - 1);
             Assert.AreEqual(5, map.map[7].Tile.Number - 1);
         }
+        [Test]
+        public void AddThornToField()
+        {
+            Map map = new Map();
+            map.AddThorn(2);
+
+            Assert.AreEqual(true, map.map[1].Thorn);
+        }
+
+        [Test]
+        public void AddSacredSpotToField()
+        {
+            Map map = new Map();
+            map.AddSacredSpot(2);
+
+            Assert.AreEqual(true, map.map[1].Sacred_Spot);
+        }
+        [Test]
+        public void AddSacredSpotToFieldWithThorn()
+        {
+            Map map = new Map();
+            map.AddThorn(2);
+            map.AddSacredSpot(2);
+
+            Assert.AreEqual(false, map.map[1].Sacred_Spot);
+        }
     }
 }

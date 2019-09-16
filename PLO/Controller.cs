@@ -14,5 +14,13 @@ namespace PLO
         {
             return RandomGenerator.Draw(numberOfFields);
         }
+        public void AddThornToField(int FieldNumber)
+        {
+            GameBoard.GameMap.AddThorn(FieldNumber);
+        }
+        public bool AddSacredSpotToField(int FieldNumber)
+        {
+            return GameBoard.GameMap.AddSacredSpot(FieldNumber);
+        }
     }
 }

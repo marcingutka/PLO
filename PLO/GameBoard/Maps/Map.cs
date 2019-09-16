@@ -38,5 +38,14 @@ namespace PLO.GameBoard.Maps
         {
             map[fieldNumber - 1].IsActive = false;
         }
+        public void AddThorn(int fieldNumber)
+        {
+            map[fieldNumber - 1].Thorn = true;
+        }
+        public bool AddSacredSpot(int fieldNumber)
+        {
+            map[fieldNumber - 1].Sacred_Spot = true;
+            return map[fieldNumber - 1].Sacred_Spot;
+        }
     }
 }
